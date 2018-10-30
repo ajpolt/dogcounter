@@ -3,6 +3,7 @@ package com.adampolt.dogcounter;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
                 setDogCount(0);
             }
         });
+
+        int color = ContextCompat.getColor(this, R.color.colorPrimary);
+        addButton.setBackgroundColor(color);
     }
 
     private void setDogCount(int count) {
@@ -48,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
         prefs.edit().putInt("count", count).apply();
 
-        if(count % 10 == 0) {
+        if(count > 0 && count % 10 == 0) {
             Intent congratsIntent = new Intent(this, CongratsActivity.class);
             startActivity(congratsIntent);
         }

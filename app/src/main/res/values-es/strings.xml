@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contador de perros</string>
+    <string name="reset">Restablecer</string>
+    <string name="hello">Hola</string>
+</resources>

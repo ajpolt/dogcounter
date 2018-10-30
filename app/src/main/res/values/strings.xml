@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Dog Counter</string>
+    <string name="reset">Reset</string>
+    <string name="plusone" translatable="false">+1</string>
+    <string name="zero" translatable="false">0</string>
+    <string name="hello">Hello</string>
 </resources>
